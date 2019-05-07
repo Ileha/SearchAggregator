@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SearchAggregator.DataModel
 {
@@ -15,6 +11,8 @@ namespace SearchAggregator.DataModel
         public int linkId { get; set; }
         public String link { get; set; }
         public String title { get; set; }
+        [Required]
+        public virtual Query query { get; set; }
 
         public Link() {}
         public Link(String title, String link)

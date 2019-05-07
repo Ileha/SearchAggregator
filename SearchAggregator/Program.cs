@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Json;
-using System.Runtime.Serialization;
 using SearchAggregator.DataModel;
-using System.Data.SqlClient;
 using CommadInterfaces;
 using SearchAggregator.Search;
 using SearchAggregator.Search.google;
@@ -40,13 +38,11 @@ namespace SearchAggregator
                 {
                     commandBank.Execute(cmdData.Cmd, cmdData);
                 }
-                catch (Exception err) {
+                catch (Exception err)
+                {
                     Console.WriteLine(err);
                 }
             }
-
-            Console.WriteLine("done");
-            Console.Read();
         }
 
         /*
